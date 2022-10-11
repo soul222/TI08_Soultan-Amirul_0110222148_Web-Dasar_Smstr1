@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza UHT</title>
+  </head>
+  <body>
+    <h2>Blackstone Goose Bistro | Pizza on Demand</h2>
+    <small style="display: block; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px;">
+      Our 12" wood-fired pizzas are avaiable for delivery. Build your custom
+      pizza and we'll deliver it within an hour.
+    </small>
+    <hr>
+    <form action="http://www.blackgoosebistro.com/pizza.php" method="post">
+    <fieldset>
+        <legend>Your Information</legend>
+        <ul style="list-style-type: none;">
+            <li>
+                <label for="form-name">Customer Name :</label>
+                <input type="text" name="customername" id="form-name" placeholder="Your Name">
+            </li>
+            <li>
+                <label for="form-address">Address :</label>
+                <input type="text" name="address" id="form-address" placeholder="Your Address">
+            </li>
+            <li>
+                <label for="form-te">Telephone :</label>
+                <input type="tel" name="telephone" id="form-te" placeholder="Your Number">
+            </li>
+            <li>
+                <label for="form-email">Email :
+                <input type="email" name="email" id="form-email" placeholder="Your Email"></label>
+            </li>
+            <li>
+                Instruction
+                <br>
+                <textarea name="instruction" id="form-story" cols="60" rows="4" maxlength="400" placeholder="No more than 400 characters long"></textarea>
+            </li>
+        </ul>
+      <h2>Design your dream pizza :</h2>
+      <fieldset>
+        <legend>Pizza specs</legend>
+        <fieldset>
+        <legend>Crust (Choose one):</legend>
+        <ul style="list-style-type:none;">
+            <li><input type="radio" name="crust" id="crust" value="Classic white">Classic white</li>
+            <li><input type="radio" name="crust" id="crust" value="Multigrain"> Multigrain</li>
+            <li><input type="radio" name="crust" id="crust" value="Cheese-stuffed crust">Cheese-stuffed crust</li>
+            <li><input type="radio" name="crust" id="crust" value="Gluten-free">Gluten-free</li>
+        </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Toppings (Choose as many as you want)</legend>
+            <ul style="list-style-type: none;">
+                <li><input type="checkbox" name="toppings[]" value="red sauce" checked="">Red Sauce</li>
+                <li><input type="checkbox" name="toppings[]" value="White sauce" checked="">White sauce</li>
+                <li><input type="checkbox" name="toppings[]" value="Mozzarella Cheese" checked="">Mozzarella Cheese</li>
+                <li><input type="checkbox" name="toppings[]" value="Pepperoni" checked="">Pepperoni</li>
+                <li><input type="checkbox" name="toppings[]" value="Mushrooms" checked="">Mushrooms</li>
+                <li><input type="checkbox" name="toppings[]" value="Peppers" checked="">Peppers</li>
+                <li><input type="checkbox" name="toppings[]" value="Anchovies" checked="">Anchovies</li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Number</legend>
+            <label for="">How many pizzas:</label>
+            <select name="pizzas" id="Jumlah" size="1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+        </fieldset>
+     </fieldset>
+    </fieldset>
+    <button type="submit" value="Bring me a pizza!">Bring me a pizza</button>
+    <button type="reset">reset</button>
+    </form>
+    <!-- script -->
+    <script></script>
+  </body>
+</html>
