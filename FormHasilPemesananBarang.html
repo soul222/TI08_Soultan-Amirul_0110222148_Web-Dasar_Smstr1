@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Hasil Pemesanan Barang</title>
+</head>
+<style>
+      @media screen and (max-width: 487px) {
+        main{
+            width: fit-content;
+            position: fixed;
+        }
+        table{
+            width:fit-content;
+            position: fixed;
+        }
+    }
+</style>
+<body>
+    <main style="width:80%; margin: 20px auto;">
+    <form action="" method="post">
+        <table style="width:50%; margin: 20px auto;">
+            <tr>
+                <td><label for="form-name">Title Here :</label></td>
+                <td>Macbook Air £800</td>
+            </tr>
+            <tr>
+                <td>Description :</td>
+                <td>Year: 2009</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Model:</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> Condition: Mint</td>
+            </tr>
+            <tr>
+                <td><label for="">Total Amount :</label></td>
+                <td>£800</td>
+            </tr>
+            <tr>
+                <td><label for="">Pay to :</label></td>
+                <td>123-456-789-0</td>
+            </tr>
+            <tr>
+                <td>Payment type :</td>
+                <td><select name="" id="" style="width: 70%;">
+                    <option value="">Visa Debit</option>
+                    <option value="">Transfer Bank</option>
+                    <option value="">E-Wallet</option>
+                    <option value="">Cash on Delivery</option>
+                    <option value="">Debit Card</option>
+                    <option value="">at the Counter</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="Form-name">Account Holder</label></td>
+                <td><input type="text" name="Form-name" id="InputName" placeholder="Name Here" style="width:75%;"></td>
+            </tr>
+            <tr>
+                <td><label for="">Account No :</label></td>
+                <td><input type="tel" name="AccountNumber" id="InputNumber" pattern="^\d{3}-\d{3}-\d{3}-\d{1}$" placeholder="123-456-789-0" style="width: 95%;"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="color: green;"><input type="checkbox" name="" id="" checked style="background-color: green; border: 1px solid green;">Send to Mobile Phone</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="color: green;"><input type="checkbox" name="" id="" checked style="background-color: green; border: 1px solid green;">Send to Email</td>
+            </tr>
+            <tr>
+                <td><label for="">Send to Mobile Phone :</label></td>
+                <td><input type="tel" placeholder="1234567890, 1234567891"  style="width: 80%;"></td>
+            </tr>
+            <tr>
+                <td><label for="form-Email">Send to Email :</label></td>
+                <td><input type="email" name="form-Email" id="InputEmail" style="width: 80%;" placeholder="mfmm2g13@soton.ac.uk, fys_06@yahoo.com"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><img src="MacBook-air-2022_-1.jpg" id="output" height="125" width="170" style="border:1px solid white;"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span ></span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" style="margin-top: 20px; ">Pay Using QuidLink</button></td>
+            </tr>
+        </table>
+    </form>
+</main>
+</body>
+</html>

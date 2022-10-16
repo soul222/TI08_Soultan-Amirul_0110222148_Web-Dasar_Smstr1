@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang</title>
+</head>
+<style>
+    @media screen and (max-width: 487px) {
+        main{
+            width: fit-content;
+            position: fixed;
+        }
+        table{
+            width:fit-content;
+            position: fixed;
+        }
+    }
+</style>
+<body>
+    <!-- Bagian Form -->
+    <main style="width: 80%; margin: 20px auto; ">
+        <form action="F:\xampp\htdocs\praktikum web\meet 3\FormHasilPemesananBarang.html" method="post" name="formPembelian"  onsubmit="return validateForm()">
+            <table style="width:50%; margin: 20px auto;">
+                <!-- Form-Name -->
+                <tr>
+                    <td><label for="name">Title Here :</label></td>
+                    <td><input type="text" name="name" id="InputNama" placeholder="Macbook Air £800" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td><label for="form-Description">Description :</label></td>
+                    <td><textarea name="form-Description" id="InputDescription" cols="21" rows="5"  style="width: 100%;">Year: 2009
+
+Model:
+
+Condition: Mint</textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="AN">Account Number :</label></td>
+                    <td><input type="tel" name="AN" id="InputNumber" pattern="^\d{3}-\d{3}-\d{3}-\d{1}$" placeholder="123-456-789-0"></td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 77px;"><label for="Bank" style="text-align:right; "></label>Bank :</td>
+                    <td> 
+                     <select name="Bank" id="InputBank" size="1" style="width:80%;">
+                         <option value="">HSBC</option>
+                         <option value="">Bank BCA</option>
+                         <option value="">Bank MANDIRI</option>
+                         <option value="">Bank BNI</option>
+                         <option value="">Bank BRI</option>
+                         <option value="">Bank Syariah Indonesia</option>
+                         <option value="">Bank Permata</option>
+                         <option value="">Bank CIMB</option>
+                         <option value="">Bank Danamon</option>
+                     </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 7px;"><label for="name">Account Holder :</label></td>
+                    <td><input type="text" name="name" id="InputName" placeholder="Name Here" style="width:90%;"></td>
+                </tr>
+                <tr>
+                    <td><label for="Transaction">Transaction :</label></td>
+                    <td><input type="number" name="Transaction" id="InputTransaction" size="1" placeholder="1" style="width: 10%;"></td>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                    <td><small>*If the transaction for 3 person, choose 3 form the drop-down list</small> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="color: green;"><input type="checkbox" name="" id="" checked style="background-color: green; border: 1px solid green;">Send to Mobile Phone</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="color: green;"><input type="checkbox" name="" id="" checked style="background-color: green; border: 1px solid green;">Send to Email</td>
+                </tr>
+                <tr>
+                    <td><label for="tel">Send to Mobile Phone :</label></td>
+                    <td><input type="tel" name="tel" placeholder="1234567890, 1234567891"  style="width: 80%;"></td>
+                </tr>
+                <tr>
+                    <td><label for="Email">Send to Email :</label></td>
+                    <td><input type="email" name="Email" id="InputEmail" style="width: 80%;" placeholder="mfmm2g13@soton.ac.uk, fys_06@yahoo.com"></td>
+                </tr>
+                <tr>
+                    <td><input type="file" accept="image/" onchange="loadFile(event)" name="img" id="tombol" style="color:white;" placeholder="Upload Foto"></td>
+                    <td><img src="MacBook-air-2022_-1.jpg" id="output" height="125" width="170" style="border:1px solid white;"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" style="margin-top: 20px;">Generate Nabr Link</button></td>
+                </tr>
+        </form>
+    </main>
+   <script type="text/javascript">
+            var loadFile = function(event) {
+                var output = document.getElementById('output');
+                output.src = URL.createObjectURL(event.target.files[0]);
+            }
+
+            function validateForm() {
+            if (document.forms["formPembelian"]["name"].value == "") {
+                alert("Nama Tidak Boleh Kosong");
+                document.forms["formPembelian"]["name"].focus();
+                return false;
+            }
+            if (document.forms["formPembelian"]["form-Description"].value == "") {
+                alert("Description Tidak Boleh Kosong");
+                document.forms["formPembelian"]["form-Description"].focus();
+                return false;
+            }
+            if (document.forms["formPembelian"]["AN"].selectedIndex < 1) {
+                alert("Your Account Number");
+                document.forms["formPembelian"]["AN"].focus();
+                return false;
+            }
+            if (document.forms["formPembelian"]["Bank"].selectedIndex < 1) {
+                alert("Pilih Bank.");
+                document.forms["formPembelian"]["Bank"].focus();
+                return false;
+            }
+            if (document.forms["formPembelian"]["name"].value == "") {
+                alert("Account Holder Tidak Boleh Kosong");
+                document.forms["formPembelian"]["name"].focus();
+                return false;
+            }
+            if (document.forms["formPembelian"]["Transaction"].value == "") {
+                alert("Pilih Transaksi");
+                document.forms["formPembelian"]["Transaction"].focus();
+                return false;
+            }
+            if (document.forms["formPembelian"]["tel"].value == "") {
+                alert("Nomor telpon Tidak Boleh Kosong");
+                document.forms["formPembelian"]["tel"].focus();
+                return false;
+            }
+            if (document.forms["formPembelian"]["Email"].value == "") {
+                alert("Email anda Tidak Boleh Kosong");
+                document.forms["formPembelian"]["Email"].focus();
+                return false;
+            }
+        }
+   </script>
+</body>
+</html>
