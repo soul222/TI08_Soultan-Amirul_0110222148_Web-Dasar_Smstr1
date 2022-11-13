@@ -1,0 +1,20 @@
+body{
+    display: flex;
+    justify-content: space-evenly;
+}
+.box{
+    width: 200px;
+    height: 500px;
+}
+.box:nth-child(1){
+    background-color: #f4eb49;
+}
+.box:nth-child(2){
+background-color: #f76424;
+}
+.box:nth-child(3){
+background-color: #aedd49;
+}
+.box:nth-child(4){
+background-color:red;
+}

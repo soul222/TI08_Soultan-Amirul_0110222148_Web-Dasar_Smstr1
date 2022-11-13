@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+}
+.container:nth-child(2){
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+
+}
+.bg-yellow{
+    background-color: yellow;
+    width: 25%;
+    height: 100px;
+}
+.bg-orange{
+    width: 73%;
+    height: 100px;
+    background-color: #f76424;
+    
+}
+.bg-green{
+    background-color: #aedd94;
+    width: 25%;
+    height: 380px;
+}
+.bg-grey{
+    background-color: grey;
+    width: 46%;
+    height: 380px;
+    margin-right: 5px;
+}
+.bg-lightblue{
+    background-color: aqua;
+    width: 26%;
+    height: 380px;
+}
+.bg-blue{
+    margin: 18em 0px  auto ;
+    padding-top: 5px;
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+}
