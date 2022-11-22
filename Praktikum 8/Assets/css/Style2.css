@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+header{
+    padding: 20px;
+    background-color: #F0E68C;
+    flex-grow: 2;
+}
+div{
+    flex-grow: 4;
+    display: flex;
+}
+article{
+    padding: 20px;
+    flex-grow: 3;
+    background-color: white;
+}
+aside{
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #FFC0CB;
+}
+nav{
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #03DAC5;
+}
+footer{
+    padding: 20px;
+    background-color: #F0E68C;
+    flex-grow: 2;
+}

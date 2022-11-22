@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 8</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 5px;
+        display: flex;
+        min-height: 98vh;
+        flex-direction: column;
+        align-content: space-between;
+        background-color: rgb(253,175,177);
+        color: white;
+        font-weight: bold;
+    }
+    header, footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        background-color: #98D1C7;
+    }
+    .container{
+        margin: 10px 0;
+        flex-grow: 2;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    aside{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #62B7B6;
+        flex-grow: 1;
+    }
+    article{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 10px;
+        background-color: #FA7A7B;
+        flex-grow: 2;
+    }
+    div{
+        width: 100%;
+        margin:10px;
+        display: flex;
+        justify-content: center;
+    }
+    .img{
+        width: 30%;
+        padding: 20px;
+        background-color: #D6D5D5;
+        margin-left: 10px;
+    }
+</style>
+<body>
+    <header><h3 class="text">Header</h3></header>
+    <div class="container">
+        <aside><h3 class="text">Aside</h3></aside>
+        <Article><h3 class="text">Article</h3>
+            <div>
+                <div class="img"><h3 class="text">Image</></div>
+                <div class="img"><h3 class="text">Image</h3></div>
+                <div class="img"><h3 class="text">Image</h3></div>
+            </div>
+        </Article>
+    </div>
+    <footer><h3 class="text">Footer</h3></footer>
+</body>
+</html>
