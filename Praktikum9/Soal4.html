@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan</title>
+</head>
+<body>
+    <h1>Soal 4</h1>
+    <h2>Program Penjumlahan</h2>
+    <Label>Masukan Angka :</Label>
+    <br>
+    <input type="number" id="Angka1">
+    <p>+</p>
+    <input type="number" name="" onchange="Hitung(this.value)">
+    <p>=</p>
+    <span id="Hasil"></span>
+    <script>
+        function Hitung(angka){
+            angka2 = parseInt(angka)
+            let Angka1 = parseInt(document.getElementById('Angka1').value)
+            let Hasil =  document.getElementById('Hasil')
+            let Jumlah = (Angka1 + angka2)
+            Hasil.innerHTML = Jumlah
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Biaya Parkir</title>
+</head>
+<body>
+    <h1>Soal3</h1>
+    <h2>Menghitung Biaya Parkir</h2>
+    <!-- Jam Masuk -->
+    <label>Jam Masuk</label>
+    <input type="number" id="Masuk">
+    <!-- Jam Keluar -->
+    <label>Jam Keluar</label>
+    <input type="number" id="Keluar">
+    <!-- Button -->
+    <button>Hitung</button>
+    <!-- Lama -->
+    <p>Durasi : <span id="Durasi"></span>Jam</p>
+    <!-- Biaya -->
+    <p>Total Biaya : Rp.<span id="Hasil"></span></p>
+    <!-- Java Script -->
+    <script>
+        BTN = document.getElementsByTagName('button')[0]
+        
+        BTN.addEventListener('click', function(){
+            let Masuk = (document.getElementById('Masuk').value)
+            let Keluar = document.getElementById('Keluar').value
+            let Durasi = document.getElementById('Durasi')
+            let Biaya = document.getElementById('Hasil')
+            let selisih = Keluar - Masuk  
+            Durasi.innerHTML = selisih
+            if(selisih <= 2){
+                Durasi.innerHTML = selisih
+                Hasil.innerHTML = 2000
+            }else{
+                Durasi.innerHTML = selisih
+                Hasil.innerHTML = selisih * 1000
+            }
+        })
+    </script>
+</body>
+</html>

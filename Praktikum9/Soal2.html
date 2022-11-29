@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Nilai Kurs</title>
+</head>
+<body>
+    <h1>Soal 2</h1>
+    <h2>Menghitung Nilai Kurs Mata UANG Dollar</h2>
+    <label>Masukan Jumlah Rupiah :</label>
+    <input type="number" id="Rupiah" onchange="hitungKurs()">
+    <p>Hasil Kurs : <span id="Hasil"></span></p>
+    <script>
+       function hitungKurs(){
+        let Rupiah = parseInt(document.getElementById('Rupiah').value)
+        let Kurs = Rupiah / 14560
+        document.getElementById('Hasil').innerHTML= Kurs.toFixed(2)
+       }
+    </script>
+</body>
+</html>
