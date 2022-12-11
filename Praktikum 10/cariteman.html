@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Teman</title>
+</head>
+<body>
+    <form id="form">
+    <label for="name">Cari Siswa</label>
+    <input type="text" name="" id="InputName">
+    <button type="submit">Go</button>
+    </form>
+    <hr>
+    <div style="width: 500px; border:25px solid green; padding:25px; margin:25px;">
+        Nama yang anda cari : <span id="Hasil" style="color: blue;"></span>
+    </div>
+    <!-- Javascript -->
+    <script>
+        let form = document.getElementById('form')
+        let Hasil = document.getElementById('Hasil')
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            let name = document.getElementById('InputName').value
+            Hasil.innerHTML = name
+            if(name.tolowercase() == 'ahmad' ){
+                console.log('Ahmad')
+                console.log('Ahmad Ketemu')
+            }else{
+                Hasil.style.color = "red"
+                console.log(name)
+                console.log(`ini bukan ${name}`)
+            }
+        })
+    </script>
+</body>
+</html>

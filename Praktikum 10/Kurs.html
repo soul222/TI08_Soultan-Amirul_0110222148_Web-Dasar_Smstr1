@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table border="2">
+            <thead>
+                <th>Masukan Uang</th>
+                <th>Mata Uang</th>
+                <th>Nilai Rupiah</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="number" name="" id="Nilai"></td>
+                    <td><select name="" id="Uang" onchange="Kurs()">
+                            <option value="USD">Dollar Us</option>
+                            <option value="SG">Dollar Singapore</option>
+                            <option value="MY">Ringgit Malaysia</option>
+                            <option value="Yen">Yen Japan</option>
+                            <option value="ERU">Euro</option>
+                            <option value="RYD">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td>Rp.<span id="Hasil"></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <script>
+        let input = document.getElementById('Nilai')
+        let KURS = document.getElementById('Uang')
+        let Hasil = document.getElementById('Hasil')
+        // sebuah function saat object diklik maka nilai dari input di olah
+        function Kurs(){
+            if(KURS.value == "USD"){
+                 Hasil.innerHTML = input.value * 9915
+            }else if(KURS.value == "SG"){
+                 Hasil.innerHTML = input.value * 13472
+            }else if(KURS.value == "MY"){
+                 Hasil.innerHTML = input.value * 874 
+            }else if(KURS.value == "Yen"){
+                 Hasil.innerHTML = input.value * 120
+            }else if(KURS.value == "ERU"){
+                 Hasil.innerHTML = input.value * 15888
+            }else if(KURS.value == "RYD"){
+                Hasil.innerHTML = input.value * 3592
+            }else{
+                Hasil.innerHTML = 0;
+            }
+        }
+    </script>
+</body>
+</html>

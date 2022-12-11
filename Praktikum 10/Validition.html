@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  ul{
+    list-style-type: none;
+  }
+</style>
+<body>
+  <h1>Pendaftaran</h1>
+    <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <span id="usernameError" ></span><br>
+        <label for="Email">email:</label><br>
+        <input type="email" id="email" name="password"><br>
+        <span  id="emailError"></span><br>
+        <label for="Waktu">Waktu berangkat:</label><br>
+        <input type="time" id="time" name=""><br>
+        <span id="waktuError"></span><br>
+        <label for="Tujuan">Tujuan:</label><br>
+        <input type="text" id="tujuan" name="password"><br>
+        <span id="tujuanError"></span><br>
+        <label for="Email">Jumlah tiket:</label><br>
+        <input type="number" id="nomor" name="password"><br>
+        <span id="nomorError"></span><br><br>
+        <button type="submit">Login</button>
+      </form>
+       <span id="hasil">
+
+      </span>
+      <script>
+        let form = document.querySelector('form')
+          form.addEventListener('submit', function(e){
+            e.preventDefault()
+          // Ambil nilai input dari user
+          let username = document.getElementById("username").value;
+          let email = document.getElementById("email").value;
+          let  time = document.getElementById("time").value;
+          let tujuan = document.getElementById("tujuan").value;
+          let number = document.getElementById("nomor").value;
+          let Length = 30 
+        //   jika data semua kosong
+          if (username == "" && email == "" && time == "" && tujuan == "" && number == "") {
+            document.getElementById("usernameError").innerHTML = "nama tidak boleh kosong!";
+            document.getElementById("nomorError").innerHTML = "nomor tidak boleh kosong!";
+            document.getElementById("emailError").innerHTML = "email tidak boleh kosong!";
+            document.getElementById("tujuanError").innerHTML = "tujuan tidak boleh kosong!";
+            document.getElementById("waktuError").innerHTML = "waktu tidak boleh kosong!";
+            document.getElementById("usernameError").style.color="red"
+            document.getElementById("nomorError").style.color="red"
+            document.getElementById("emailError").style.color="red"
+            document.getElementById("waktuError").style.color="red"
+            document.getElementById("tujuanError").style.color="red"
+            return false;
+        } else {
+              document.getElementById("usernameError").innerHTML = "";
+              document.getElementById("nomorError").innerHTML = "";
+              document.getElementById("emailError").innerHTML = "";
+              document.getElementById("tujuanError").innerHTML = "";
+              document.getElementById("waktuError").innerHTML = "";
+          
+          }
+            // Verifikasi apakah input kosong
+          if (username == "") {
+            document.getElementById("usernameError").innerHTML = "Username Invalid";
+            document.getElementById("usernameError").style.color="red"
+            return false;
+          }else if(username.length > Length){
+            document.getElementById("usernameError").innerHTML = "Username Invalid";
+            document.getElementById("usernameError").style.color="red"
+            return false;
+          }
+           else {
+            document.getElementById("usernameError").innerHTML = "Valid";
+            document.getElementById("usernameError").style.color="green"
+          }
+          if (email == "") {
+            document.getElementById("emailError").innerHTML = "Email Invalid";
+            document.getElementById("emailError").style.color="red"
+            return false;
+          } else {
+            document.getElementById("emailError").innerHTML = "Valid";
+            document.getElementById("emailError").style.color="green"
+          }
+          if (time == "") {
+            document.getElementById("waktuError").innerHTML = "waktu Invalid";
+            document.getElementById("waktuError").style.color="red"
+            return false;
+          } else {
+            document.getElementById("waktuError").innerHTML = "Valid";
+            document.getElementById("waktuError").style.color="green"
+          }
+          if (tujuan == "" && tujuan.length <= 3) {
+            document.getElementById("tujuanError").innerHTML = "Tujuan Invalid";
+            document.getElementById("tujuanError").style.color="red"
+            return false;
+          } else {
+            document.getElementById("tujuanError").innerHTML = "Valid";
+            document.getElementById("tujuanError").style.color="green"
+          }
+          if (number == "") {
+            document.getElementById("nomorError").innerHTML = "Jumlah tiket Invalid";
+            document.getElementById("nomorError").style.color="red"
+            return false;
+          }else if(number <= 0 ||number >= 11) {
+            document.getElementById("nomorError").innerHTML = "Jumlah tiket Invalid";
+            document.getElementById("nomorError").style.color="red"
+          }
+          else {
+            document.getElementById("nomorError").innerHTML = "Valid";
+            document.getElementById("nomorError").style.color="green"
+            alert(`Selamat ${username} terdaftar `)
+          }
+        //   verifikasi
+        document.getElementById("hasil").innerHTML = `<ul><li>Nama : ${username}</li>
+        <li>Email : ${email}</li><li>Waktu Berangkat : ${time}</li><li>Tujuan : ${tujuan}</li> <li>Jumlah tiket : ${number}</li></ul>`
+        })
+       </script>
+</body>
+</html>

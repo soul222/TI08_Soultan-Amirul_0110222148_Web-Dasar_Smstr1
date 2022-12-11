@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+</head>
+<body>
+   <div id="Hasil" style="width: 50%; border: 1px solid; height:300px; overflow: scroll;"></div>
+   <fieldset style="width: 48%;">
+    <input type="text" id="Text" style="width:70%;">
+    <button onclick="Kirim()">Submit</button>
+   </fieldset>
+   <script>
+    let Hasil = document.getElementById('Hasil')
+    let Kirim = function(){
+        let text = document.getElementById('Text')
+        let div = document.createElement('p')
+        let txt = document.createTextNode(text.value)
+        div.appendChild(txt)
+        Hasil.appendChild(div)
+    }
+   </script>
+</body>
+</html>

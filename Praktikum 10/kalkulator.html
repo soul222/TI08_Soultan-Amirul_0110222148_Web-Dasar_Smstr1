@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kalkulator Penjumlahan</h1>
+    <label for="name">Bilangan 1</label>
+    <input type="text"  id="Number1">
+    <br>
+    <label for="name">Bilangan 2</label>
+    <input type="text" id="Number2">
+    <br>
+    <label>pilih operasi aritmatika :</label>
+    <input type="radio" name="operasi" value="Penjumlahan" id="Tambah">+
+    <input type="radio" name="operasi" value="Pengurangan" id="kurang">-
+    <input type="radio" name="operasi" value="Pembagian" id="bagi">/
+    <input type="radio" name="operasi" value="Perkalian" id="kali">x
+    <br>
+    <button onclick="Hitung()">Hitung</button>
+    <p>Hasil : <span id="Hasil"></span></p>
+    <script>
+        let Hasil = document.getElementById('Hasil')
+        function Hitung(){
+            let angka1 = parseInt(document.getElementById('Number1').value)
+            let angka2 = parseInt(document.getElementById('Number2').value)
+            let operasi = document.querySelector('input[name="operasi"]:checked').value
+            
+            switch (operasi) {
+                case 'Penjumlahan':
+                    hasil = angka1 + angka2
+                    break;
+                case 'Pengurangan':
+                    hasil = angka1 - angka2
+                    break;
+                case 'Pembagian':
+                    hasil = angka1 / angka2
+                    break;
+                default :
+                    hasil = angka1 * angka2
+                    break;
+            }    
+            Hasil.innerHTML = hasil
+            console.log(hasil)       
+        }
+    </script>
+</body>
+</html>
