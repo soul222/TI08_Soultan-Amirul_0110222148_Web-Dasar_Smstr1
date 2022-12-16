@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <div>
+    <select  id="Aneka" onchange="Ganti()">
+        <option value="1">Mercedes</option>
+        <option value="2">Range Rover</option>
+        <option value="3">McLaren</option>
+        <option value="4">Mercedes coupe</option>
+        <option value="5">Mustang</option>
+        <option value="6">Bmw</option>
+    </select>
+</div>
+    <img src="" alt="" id="Gambar1" style="width: 50%;">
+    <script>
+        function Ganti(){
+            let Select = document.getElementById('Aneka')
+            let Gambar = document.getElementById('Gambar1')
+            if(Aneka.value == "1"){
+                Gambar.src = "images/car-1.jpg"
+                alert('ini mobil mercedes')
+            }else if(Aneka.value == "2"){
+                Gambar.src = "images/car-2.jpg"
+                alert('ini mobil range rover')
+            }else if(Aneka.value == "3"){
+                Gambar.src = "images/car-3.jpg"
+                alert('ini mobil McLaren')
+            }else if(Aneka.value == "4"){
+                Gambar.src = "images/car-7.jpg"
+                alert('ini mobil mercedes coupe')
+            }else if(Aneka.value == "5"){
+                Gambar.src = "images/car-4.jpg"
+                alert('ini mobil mustang')
+            }else if(Aneka.value == "6"){
+                Gambar.src = "images/car-5.jpg"
+                alert('ini mobil bmw')
+            }else{
+                alert('Gambar Kosong')
+            }
+        }
+    </script>
+</body>
+</html>
